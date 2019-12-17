@@ -1,0 +1,38 @@
+﻿
+THEORY ProofList IS
+_f(5) & _f(4) & _f(3) & _f(2) & _f(1) & _f(8) & _f(7) & _f(11) & _f(10) & _f(6) & _f(9) & ajouterVeloPrecondition.1,(_f(18) => _f(19));
+_f(5) & _f(4) & _f(3) & _f(2) & _f(1) & _f(8) & _f(7) & _f(11) & _f(10) & Invariants.1,(_f(14) => _f(15));
+_f(5) & _f(4) & Properties.1,(_f(12) => _f(13))
+
+END
+&
+
+THEORY Formulas IS
+("`Component constraints'" & btrue);
+("`Used machines constraints'" & btrue);
+("`Component properties'" & BICLOO: FIN(INTEGER) & not(BICLOO = {}) & (1..5)*{PARCSS}: FIN(NATURAL*{PARCSS}) & not((1..5)*{PARCSS} = {}) & (1..10)*{PLACES}: FIN(NATURAL*{PLACES}) & not((1..10)*{PLACES} = {}) & maxBicloo: INTEGER & 0<=maxBicloo & maxBicloo<=2147483647 & 1<=maxBicloo & maxBicloo+1<=card((1..10)*{PLACES}));
+("`Seen and used machines properties'" & btrue);
+("`Included,imported and extended machines properties'" & btrue);
+("`Component invariant'" & velo: FIN(BICLOO) & place: velo <-> (1..10)*{PLACES} & parcs: (1..10)*{PLACES} +-> (1..5)*{PARCSS} & dom(parcs) = (1..10)*{PLACES} & card(velo)<=maxBicloo & btrue & btrue);
+("`Seen and used machines invariants'" & btrue);
+("`Included,imported and extended machines invariants'" & btrue);
+("`Component assertions'" & btrue);
+("`Seen and used machines assertions'" & btrue);
+("`Included,imported and extended machines assertions'" & btrue);
+("`Local hypotheses'" & BICLOO: FIN(INTEGER) & not(BICLOO = {}) & (1..5)*{PARCSS}: FIN(NATURAL*{PARCSS}) & not((1..5)*{PARCSS} = {}) & (1..10)*{PLACES}: FIN(NATURAL*{PLACES}) & not((1..10)*{PLACES} = {}) & maxBicloo: INTEGER & 0<=maxBicloo & maxBicloo<=2147483647 & 1<=maxBicloo);
+((1..10)*{PLACES}: FIN((1..10)*{PLACES}));
+("`Local hypotheses'" & velo: FIN(BICLOO) & place: velo <-> (1..10)*{PLACES} & parcs: (1..10)*{PLACES} +-> (1..5)*{PARCSS} & dom(parcs) = (1..10)*{PLACES});
+(velo: FIN(velo));
+("`ajouterVelo preconditions in previous components'" & btrue);
+("`ajouterVelo preconditions in this component'" & vv: BICLOO & not(vv: velo) & card(velo)+1<=maxBicloo);
+("`Local hypotheses'" & vv: BICLOO & not(vv: velo));
+(velo: FIN(velo))
+
+END
+&
+
+THEORY EnumerateX IS
+(PARCSS == {parc1,parc2,parc3,parc4,parc5});
+(PLACES == {palce1,place2,place3,place4,place5,place6,place7,place8,place9,place10})
+
+END

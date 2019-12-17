@@ -1,0 +1,2396 @@
+<Proof_Obligations>
+<Define name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx"/>
+<Define name="seext"/>
+<Define name="lprp">
+<Attr>
+<Pos l="7" s="4" c="1"/>
+</Attr>
+<Set>
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:1:1:1" typref="1935250049">
+<Attr>
+<Pos l="8" s="6" c="5"/>
+</Attr>
+</Id>
+</Set>
+<Set>
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:1:2:1" typref="403129221">
+<Attr>
+<Pos l="9" s="6" c="6"/>
+</Attr>
+</Id>
+</Set>
+<Attr>
+<Pos l="13" s="10" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="15" s="1" c="14"/>
+</Attr>
+<Id value="maxBicloo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:1:1" typref="2701647786">
+<Attr>
+<Pos l="15" s="9" c="5"/>
+</Attr>
+</Id>
+<Id value="NAT" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:1:2" typref="3603043417">
+<Attr>
+<Pos l="15" s="3" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Attr>
+<Pos l="16" s="2" c="16"/>
+</Attr>
+<Id value="maxBicloo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:2:1" typref="2701647786">
+<Attr>
+<Pos l="16" s="9" c="6"/>
+</Attr>
+</Id>
+<Integer_Literal value="1" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:2:2" typref="2701647786">
+<Attr>
+<Pos l="16" s="1" c="19"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Attr>
+<Pos l="17" s="1" c="16"/>
+</Attr>
+<Id value="maxBicloo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:3:1" typref="2701647786">
+<Attr>
+<Pos l="17" s="9" c="6"/>
+</Attr>
+</Id>
+<Id value="MAXINT" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:3:2" typref="2701647786">
+<Attr>
+<Pos l="17" s="6" c="18"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="18" s="1" c="15"/>
+</Attr>
+<Id value="maxPlaces" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:4:1" typref="2701647786">
+<Attr>
+<Pos l="18" s="9" c="6"/>
+</Attr>
+</Id>
+<Id value="NAT" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:4:2" typref="3603043417">
+<Attr>
+<Pos l="18" s="3" c="16"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Attr>
+<Pos l="19" s="2" c="16"/>
+</Attr>
+<Id value="maxPlaces" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:5:1" typref="2701647786">
+<Attr>
+<Pos l="19" s="9" c="6"/>
+</Attr>
+</Id>
+<Integer_Literal value="1" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:5:2" typref="2701647786">
+<Attr>
+<Pos l="19" s="1" c="19"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Attr>
+<Pos l="20" s="1" c="16"/>
+</Attr>
+<Id value="maxPlaces" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:6:1" typref="2701647786">
+<Attr>
+<Pos l="20" s="9" c="6"/>
+</Attr>
+</Id>
+<Id value="MAXINT" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:6:2" typref="2701647786">
+<Attr>
+<Pos l="20" s="6" c="18"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="inprp"/>
+<Define name="inext"/>
+<Define name="inv">
+<Attr>
+<Pos l="26" s="9" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((velo) : (FIN(BICLOO)))" op=":">
+<Attr>
+<Pos l="27" s="1" c="9"/>
+</Attr>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:1:1" typref="403129221">
+<Attr>
+<Pos l="27" s="4" c="5"/>
+</Attr>
+</Id>
+<Unary_Exp typref="1238320532" op="FIN">
+<Attr>
+<Pos l="27" s="3" c="10"/>
+</Attr>
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:1:2:1" typref="403129221">
+<Attr>
+<Pos l="27" s="6" c="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((veloCircu) : (FIN(BICLOO)))" op=":">
+<Attr>
+<Pos l="28" s="1" c="15"/>
+</Attr>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:2:1" typref="403129221">
+<Attr>
+<Pos l="28" s="9" c="6"/>
+</Attr>
+</Id>
+<Unary_Exp typref="1238320532" op="FIN">
+<Attr>
+<Pos l="28" s="3" c="16"/>
+</Attr>
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:2:2:1" typref="403129221">
+<Attr>
+<Pos l="28" s="6" c="20"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((libres) : (FIN(PLACES)))" op=":">
+<Attr>
+<Pos l="29" s="1" c="12"/>
+</Attr>
+<Id value="libres" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:3:1" typref="1935250049">
+<Attr>
+<Pos l="29" s="6" c="6"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3118279064" op="FIN">
+<Attr>
+<Pos l="29" s="3" c="13"/>
+</Attr>
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:3:2:1" typref="1935250049">
+<Attr>
+<Pos l="29" s="6" c="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((place) : (((veloCircu) +-&gt; (PLACES))))" op=":">
+<Attr>
+<Pos l="32" s="1" c="12"/>
+</Attr>
+<Id value="place" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:4:1" typref="1811357324">
+<Attr>
+<Pos l="32" s="5" c="6"/>
+</Attr>
+</Id>
+<Binary_Exp typref="4059342327" op="+-&gt;">
+<Attr>
+<Pos l="32" s="3" c="24"/>
+</Attr>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:4:2:1" typref="403129221">
+<Attr>
+<Pos l="32" s="9" c="14"/>
+</Attr>
+</Id>
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:4:2:2" typref="1935250049">
+<Attr>
+<Pos l="32" s="6" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(card(velo) &lt;= maxBicloo)" op="&lt;=">
+<Attr>
+<Pos l="35" s="2" c="17"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="35" s="4" c="6"/>
+</Attr>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:5:1:1" typref="403129221">
+<Attr>
+<Pos l="35" s="4" c="11"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="maxBicloo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:5:2" typref="2701647786">
+<Attr>
+<Pos l="35" s="9" c="20"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(card(veloCircu) &lt;= card(velo))" op="&lt;=">
+<Attr>
+<Pos l="36" s="2" c="22"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="36" s="4" c="6"/>
+</Attr>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:6:1:1" typref="403129221">
+<Attr>
+<Pos l="36" s="9" c="11"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="36" s="4" c="25"/>
+</Attr>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:6:2:1" typref="403129221">
+<Attr>
+<Pos l="36" s="4" c="30"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ass"/>
+<Define name="cst"/>
+<Proof_Obligation>
+<Comment>Initialisation dans une machine abstraite</Comment>
+<Tag>Initialisation</Tag>
+<Tag>Invariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Attr>
+<Pos l="38" s="14" c="1"/>
+</Attr>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:6:1:1:1:1" typref="403129221">
+<Attr>
+<Pos l="39" s="4" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:6:1:1:2:1" typref="3817003670">
+<Attr>
+<Pos l="39" s="4" c="5"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="place" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:6:1:2:1:1" typref="1811357324">
+<Attr>
+<Pos l="40" s="5" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:6:1:2:2:1" typref="3817003670">
+<Attr>
+<Pos l="40" s="5" c="5"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="libres" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:6:1:3:1:1" typref="1935250049">
+<Attr>
+<Pos l="41" s="6" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:6:1:3:2:1" typref="3817003670">
+<Attr>
+<Pos l="41" s="6" c="5"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:6:1:4:1:1" typref="403129221">
+<Attr>
+<Pos l="42" s="9" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:6:1:4:2:1" typref="3817003670">
+<Attr>
+<Pos l="42" s="9" c="5"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos l="26" s="9" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((velo) : (FIN(BICLOO)))" op=":">
+<Attr>
+<Pos l="27" s="1" c="9"/>
+</Attr>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:1:1" typref="403129221">
+<Attr>
+<Pos l="27" s="4" c="5"/>
+</Attr>
+</Id>
+<Unary_Exp typref="1238320532" op="FIN">
+<Attr>
+<Pos l="27" s="3" c="10"/>
+</Attr>
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:1:2:1" typref="403129221">
+<Attr>
+<Pos l="27" s="6" c="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((veloCircu) : (FIN(BICLOO)))" op=":">
+<Attr>
+<Pos l="28" s="1" c="15"/>
+</Attr>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:2:1" typref="403129221">
+<Attr>
+<Pos l="28" s="9" c="6"/>
+</Attr>
+</Id>
+<Unary_Exp typref="1238320532" op="FIN">
+<Attr>
+<Pos l="28" s="3" c="16"/>
+</Attr>
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:2:2:1" typref="403129221">
+<Attr>
+<Pos l="28" s="6" c="20"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((libres) : (FIN(PLACES)))" op=":">
+<Attr>
+<Pos l="29" s="1" c="12"/>
+</Attr>
+<Id value="libres" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:3:1" typref="1935250049">
+<Attr>
+<Pos l="29" s="6" c="6"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3118279064" op="FIN">
+<Attr>
+<Pos l="29" s="3" c="13"/>
+</Attr>
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:3:2:1" typref="1935250049">
+<Attr>
+<Pos l="29" s="6" c="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((place) : (((veloCircu) +-&gt; (PLACES))))" op=":">
+<Attr>
+<Pos l="32" s="1" c="12"/>
+</Attr>
+<Id value="place" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:4:1" typref="1811357324">
+<Attr>
+<Pos l="32" s="5" c="6"/>
+</Attr>
+</Id>
+<Binary_Exp typref="4059342327" op="+-&gt;">
+<Attr>
+<Pos l="32" s="3" c="24"/>
+</Attr>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:4:2:1" typref="403129221">
+<Attr>
+<Pos l="32" s="9" c="14"/>
+</Attr>
+</Id>
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:4:2:2" typref="1935250049">
+<Attr>
+<Pos l="32" s="6" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(card(velo) &lt;= maxBicloo)" op="&lt;=">
+<Attr>
+<Pos l="35" s="2" c="17"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="35" s="4" c="6"/>
+</Attr>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:5:1:1" typref="403129221">
+<Attr>
+<Pos l="35" s="4" c="11"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="maxBicloo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:5:2" typref="2701647786">
+<Attr>
+<Pos l="35" s="9" c="20"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(card(veloCircu) &lt;= card(velo))" op="&lt;=">
+<Attr>
+<Pos l="36" s="2" c="22"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="36" s="4" c="6"/>
+</Attr>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:6:1:1" typref="403129221">
+<Attr>
+<Pos l="36" s="9" c="11"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="36" s="4" c="25"/>
+</Attr>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:6:2:1" typref="403129221">
+<Attr>
+<Pos l="36" s="4" c="30"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>rangerVelo</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="47" s="1" c="11"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:1:1" typref="683684820">
+<Attr>
+<Pos l="47" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:1:2" typref="403129221">
+<Attr>
+<Pos l="47" s="6" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="48" s="1" c="11"/>
+</Attr>
+<Id value="pl" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:2:1" typref="1012396504">
+<Attr>
+<Pos l="48" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:2:2" typref="1935250049">
+<Attr>
+<Pos l="48" s="6" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="49" s="1" c="11"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:3:1" typref="683684820">
+<Attr>
+<Pos l="49" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:3:2" typref="403129221">
+<Attr>
+<Pos l="49" s="9" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Attr>
+<Pos l="50" s="2" c="23"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="-">
+<Attr>
+<Pos l="50" s="1" c="21"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="50" s="4" c="9"/>
+</Attr>
+<Id value="libres" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:4:1:1:1" typref="1935250049">
+<Attr>
+<Pos l="50" s="6" c="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value="1" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:4:1:2" typref="2701647786">
+<Attr>
+<Pos l="50" s="1" c="22"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Integer_Literal value="0" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:4:2" typref="2701647786">
+<Attr>
+<Pos l="50" s="1" c="25"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="place" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:3:1:1:1:1" typref="1811357324">
+<Attr>
+<Pos l="52" s="5" c="9"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="1811357324" op="\/">
+<Attr>
+<Pos l="52" s="5" c="9"/>
+</Attr>
+<Id value="place" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:3:1:1:2:1:1" typref="1811357324">
+<Attr>
+<Pos l="52" s="5" c="17"/>
+</Attr>
+</Id>
+<Nary_Exp typref="1811357324" op="{">
+<Attr>
+<Pos l="52" s="1" c="25"/>
+</Attr>
+<Binary_Exp typref="1367082039" op="|-&gt;">
+<Attr>
+<Pos l="52" s="3" c="28"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:3:1:1:2:1:2:1:1" typref="683684820">
+<Attr>
+<Pos l="52" s="2" c="26"/>
+</Attr>
+</Id>
+<Id value="pl" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:3:1:1:2:1:2:1:2" typref="1012396504">
+<Attr>
+<Pos l="52" s="2" c="31"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="libres" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:3:1:2:1:1" typref="1935250049">
+<Attr>
+<Pos l="53" s="6" c="11"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="1935250049" op="-">
+<Attr>
+<Pos l="53" s="6" c="11"/>
+</Attr>
+<Id value="libres" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:3:1:2:2:1:1" typref="1935250049">
+<Attr>
+<Pos l="53" s="6" c="21"/>
+</Attr>
+</Id>
+<Nary_Exp typref="1935250049" op="{">
+<Attr>
+<Pos l="53" s="1" c="28"/>
+</Attr>
+<Id value="pl" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:3:1:2:2:1:2:1" typref="1012396504">
+<Attr>
+<Pos l="53" s="2" c="29"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:3:1:3:1:1" typref="403129221">
+<Attr>
+<Pos l="54" s="9" c="11"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="403129221" op="-">
+<Attr>
+<Pos l="54" s="9" c="11"/>
+</Attr>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:3:1:3:2:1:1" typref="403129221">
+<Attr>
+<Pos l="54" s="9" c="24"/>
+</Attr>
+</Id>
+<Nary_Exp typref="403129221" op="{">
+<Attr>
+<Pos l="54" s="1" c="36"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:3:1:3:2:1:2:1" typref="683684820">
+<Attr>
+<Pos l="54" s="2" c="37"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos l="26" s="9" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((velo) : (FIN(BICLOO)))" op=":">
+<Attr>
+<Pos l="27" s="1" c="9"/>
+</Attr>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:1:1" typref="403129221">
+<Attr>
+<Pos l="27" s="4" c="5"/>
+</Attr>
+</Id>
+<Unary_Exp typref="1238320532" op="FIN">
+<Attr>
+<Pos l="27" s="3" c="10"/>
+</Attr>
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:1:2:1" typref="403129221">
+<Attr>
+<Pos l="27" s="6" c="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((veloCircu) : (FIN(BICLOO)))" op=":">
+<Attr>
+<Pos l="28" s="1" c="15"/>
+</Attr>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:2:1" typref="403129221">
+<Attr>
+<Pos l="28" s="9" c="6"/>
+</Attr>
+</Id>
+<Unary_Exp typref="1238320532" op="FIN">
+<Attr>
+<Pos l="28" s="3" c="16"/>
+</Attr>
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:2:2:1" typref="403129221">
+<Attr>
+<Pos l="28" s="6" c="20"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((libres) : (FIN(PLACES)))" op=":">
+<Attr>
+<Pos l="29" s="1" c="12"/>
+</Attr>
+<Id value="libres" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:3:1" typref="1935250049">
+<Attr>
+<Pos l="29" s="6" c="6"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3118279064" op="FIN">
+<Attr>
+<Pos l="29" s="3" c="13"/>
+</Attr>
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:3:2:1" typref="1935250049">
+<Attr>
+<Pos l="29" s="6" c="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((place) : (((veloCircu) +-&gt; (PLACES))))" op=":">
+<Attr>
+<Pos l="32" s="1" c="12"/>
+</Attr>
+<Id value="place" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:4:1" typref="1811357324">
+<Attr>
+<Pos l="32" s="5" c="6"/>
+</Attr>
+</Id>
+<Binary_Exp typref="4059342327" op="+-&gt;">
+<Attr>
+<Pos l="32" s="3" c="24"/>
+</Attr>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:4:2:1" typref="403129221">
+<Attr>
+<Pos l="32" s="9" c="14"/>
+</Attr>
+</Id>
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:4:2:2" typref="1935250049">
+<Attr>
+<Pos l="32" s="6" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(card(velo) &lt;= maxBicloo)" op="&lt;=">
+<Attr>
+<Pos l="35" s="2" c="17"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="35" s="4" c="6"/>
+</Attr>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:5:1:1" typref="403129221">
+<Attr>
+<Pos l="35" s="4" c="11"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="maxBicloo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:5:2" typref="2701647786">
+<Attr>
+<Pos l="35" s="9" c="20"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(card(veloCircu) &lt;= card(velo))" op="&lt;=">
+<Attr>
+<Pos l="36" s="2" c="22"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="36" s="4" c="6"/>
+</Attr>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:6:1:1" typref="403129221">
+<Attr>
+<Pos l="36" s="9" c="11"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="36" s="4" c="25"/>
+</Attr>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:6:2:1" typref="403129221">
+<Attr>
+<Pos l="36" s="4" c="30"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>sortirVelo</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="61" s="1" c="11"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:1:1" typref="683684820">
+<Attr>
+<Pos l="61" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:1:2" typref="403129221">
+<Attr>
+<Pos l="61" s="6" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="62" s="1" c="11"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:2:1" typref="683684820">
+<Attr>
+<Pos l="62" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:2:2" typref="403129221">
+<Attr>
+<Pos l="62" s="4" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos l="63" s="2" c="11"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:3:1" typref="683684820">
+<Attr>
+<Pos l="63" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:3:2" typref="403129221">
+<Attr>
+<Pos l="63" s="9" c="13"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="64" s="1" c="11"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:4:1" typref="683684820">
+<Attr>
+<Pos l="64" s="2" c="9"/>
+</Attr>
+</Id>
+<Unary_Exp typref="403129221" op="dom">
+<Attr>
+<Pos l="64" s="3" c="12"/>
+</Attr>
+<Id value="place" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:4:2:1" typref="1811357324">
+<Attr>
+<Pos l="64" s="5" c="16"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos l="65" s="2" c="27"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="65" s="1" c="24"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="65" s="4" c="9"/>
+</Attr>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:5:1:1:1" typref="403129221">
+<Attr>
+<Pos l="65" s="9" c="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value="1" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:5:1:2" typref="2701647786">
+<Attr>
+<Pos l="65" s="1" c="25"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="65" s="4" c="30"/>
+</Attr>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:5:2:1" typref="403129221">
+<Attr>
+<Pos l="65" s="4" c="35"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos l="66" s="2" c="24"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="66" s="1" c="21"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="66" s="4" c="9"/>
+</Attr>
+<Id value="libres" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:6:1:1:1" typref="1935250049">
+<Attr>
+<Pos l="66" s="6" c="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value="1" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:6:1:2" typref="2701647786">
+<Attr>
+<Pos l="66" s="1" c="22"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Id value="maxPlaces" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:6:2" typref="2701647786">
+<Attr>
+<Pos l="66" s="9" c="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="libres" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:3:1:1:1:1" typref="1935250049">
+<Attr>
+<Pos l="68" s="6" c="9"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="1935250049" op="\/">
+<Attr>
+<Pos l="68" s="6" c="9"/>
+</Attr>
+<Id value="libres" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:3:1:1:2:1:1" typref="1935250049">
+<Attr>
+<Pos l="68" s="6" c="19"/>
+</Attr>
+</Id>
+<Nary_Exp typref="1935250049" op="{">
+<Attr>
+<Pos l="68" s="1" c="27"/>
+</Attr>
+<Binary_Exp typref="1012396504" op="(">
+<Attr>
+<Pos l="68" s="0" c="33"/>
+</Attr>
+<Id value="place" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:3:1:1:2:1:2:1:1" typref="1811357324">
+<Attr>
+<Pos l="68" s="5" c="28"/>
+</Attr>
+</Id>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:3:1:1:2:1:2:1:2" typref="683684820">
+<Attr>
+<Pos l="68" s="2" c="34"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="place" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:3:1:2:1:1" typref="1811357324">
+<Attr>
+<Pos l="69" s="5" c="11"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="1811357324" op="&lt;&lt;|">
+<Attr>
+<Pos l="69" s="5" c="11"/>
+</Attr>
+<Nary_Exp typref="403129221" op="{">
+<Attr>
+<Pos l="69" s="1" c="18"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:3:1:2:2:1:1:1" typref="683684820">
+<Attr>
+<Pos l="69" s="2" c="19"/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value="place" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:3:1:2:2:1:2" typref="1811357324">
+<Attr>
+<Pos l="69" s="5" c="25"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:3:1:3:1:1" typref="403129221">
+<Attr>
+<Pos l="70" s="9" c="11"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="403129221" op="\/">
+<Attr>
+<Pos l="70" s="9" c="11"/>
+</Attr>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:3:1:3:2:1:1" typref="403129221">
+<Attr>
+<Pos l="70" s="9" c="24"/>
+</Attr>
+</Id>
+<Nary_Exp typref="403129221" op="{">
+<Attr>
+<Pos l="70" s="1" c="35"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:3:1:3:2:1:2:1" typref="683684820">
+<Attr>
+<Pos l="70" s="2" c="36"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos l="26" s="9" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((velo) : (FIN(BICLOO)))" op=":">
+<Attr>
+<Pos l="27" s="1" c="9"/>
+</Attr>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:1:1" typref="403129221">
+<Attr>
+<Pos l="27" s="4" c="5"/>
+</Attr>
+</Id>
+<Unary_Exp typref="1238320532" op="FIN">
+<Attr>
+<Pos l="27" s="3" c="10"/>
+</Attr>
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:1:2:1" typref="403129221">
+<Attr>
+<Pos l="27" s="6" c="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((veloCircu) : (FIN(BICLOO)))" op=":">
+<Attr>
+<Pos l="28" s="1" c="15"/>
+</Attr>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:2:1" typref="403129221">
+<Attr>
+<Pos l="28" s="9" c="6"/>
+</Attr>
+</Id>
+<Unary_Exp typref="1238320532" op="FIN">
+<Attr>
+<Pos l="28" s="3" c="16"/>
+</Attr>
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:2:2:1" typref="403129221">
+<Attr>
+<Pos l="28" s="6" c="20"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((libres) : (FIN(PLACES)))" op=":">
+<Attr>
+<Pos l="29" s="1" c="12"/>
+</Attr>
+<Id value="libres" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:3:1" typref="1935250049">
+<Attr>
+<Pos l="29" s="6" c="6"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3118279064" op="FIN">
+<Attr>
+<Pos l="29" s="3" c="13"/>
+</Attr>
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:3:2:1" typref="1935250049">
+<Attr>
+<Pos l="29" s="6" c="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((place) : (((veloCircu) +-&gt; (PLACES))))" op=":">
+<Attr>
+<Pos l="32" s="1" c="12"/>
+</Attr>
+<Id value="place" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:4:1" typref="1811357324">
+<Attr>
+<Pos l="32" s="5" c="6"/>
+</Attr>
+</Id>
+<Binary_Exp typref="4059342327" op="+-&gt;">
+<Attr>
+<Pos l="32" s="3" c="24"/>
+</Attr>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:4:2:1" typref="403129221">
+<Attr>
+<Pos l="32" s="9" c="14"/>
+</Attr>
+</Id>
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:4:2:2" typref="1935250049">
+<Attr>
+<Pos l="32" s="6" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(card(velo) &lt;= maxBicloo)" op="&lt;=">
+<Attr>
+<Pos l="35" s="2" c="17"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="35" s="4" c="6"/>
+</Attr>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:5:1:1" typref="403129221">
+<Attr>
+<Pos l="35" s="4" c="11"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="maxBicloo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:5:2" typref="2701647786">
+<Attr>
+<Pos l="35" s="9" c="20"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(card(veloCircu) &lt;= card(velo))" op="&lt;=">
+<Attr>
+<Pos l="36" s="2" c="22"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="36" s="4" c="6"/>
+</Attr>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:6:1:1" typref="403129221">
+<Attr>
+<Pos l="36" s="9" c="11"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="36" s="4" c="25"/>
+</Attr>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:6:2:1" typref="403129221">
+<Attr>
+<Pos l="36" s="4" c="30"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessConstraints</Tag>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Hypothesis>
+<Attr>
+<Pos l="7" s="4" c="1"/>
+</Attr>
+<Set>
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:1:1:1" typref="1935250049">
+<Attr>
+<Pos l="8" s="6" c="5"/>
+</Attr>
+</Id>
+</Set>
+<Set>
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:1:2:1" typref="403129221">
+<Attr>
+<Pos l="9" s="6" c="6"/>
+</Attr>
+</Id>
+</Set>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="15" s="1" c="14"/>
+</Attr>
+<Id value="maxBicloo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:1:1" typref="2701647786">
+<Attr>
+<Pos l="15" s="9" c="5"/>
+</Attr>
+</Id>
+<Id value="NAT" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:1:2" typref="3603043417">
+<Attr>
+<Pos l="15" s="3" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="&gt;=">
+<Attr>
+<Pos l="16" s="2" c="16"/>
+</Attr>
+<Id value="maxBicloo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:2:1" typref="2701647786">
+<Attr>
+<Pos l="16" s="9" c="6"/>
+</Attr>
+</Id>
+<Integer_Literal value="1" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:2:2" typref="2701647786">
+<Attr>
+<Pos l="16" s="1" c="19"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="&lt;">
+<Attr>
+<Pos l="17" s="1" c="16"/>
+</Attr>
+<Id value="maxBicloo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:3:1" typref="2701647786">
+<Attr>
+<Pos l="17" s="9" c="6"/>
+</Attr>
+</Id>
+<Id value="MAXINT" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:3:2" typref="2701647786">
+<Attr>
+<Pos l="17" s="6" c="18"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="18" s="1" c="15"/>
+</Attr>
+<Id value="maxPlaces" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:4:1" typref="2701647786">
+<Attr>
+<Pos l="18" s="9" c="6"/>
+</Attr>
+</Id>
+<Id value="NAT" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:4:2" typref="3603043417">
+<Attr>
+<Pos l="18" s="3" c="16"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="&gt;=">
+<Attr>
+<Pos l="19" s="2" c="16"/>
+</Attr>
+<Id value="maxPlaces" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:5:1" typref="2701647786">
+<Attr>
+<Pos l="19" s="9" c="6"/>
+</Attr>
+</Id>
+<Integer_Literal value="1" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:4:1:5:2" typref="2701647786">
+<Attr>
+<Pos l="19" s="1" c="19"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="((velo) : (FIN(BICLOO)))" op=":">
+<Attr>
+<Pos l="27" s="1" c="9"/>
+</Attr>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:1:1" typref="403129221">
+<Attr>
+<Pos l="27" s="4" c="5"/>
+</Attr>
+</Id>
+<Unary_Exp typref="1238320532" op="FIN">
+<Attr>
+<Pos l="27" s="3" c="10"/>
+</Attr>
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:1:2:1" typref="403129221">
+<Attr>
+<Pos l="27" s="6" c="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="((veloCircu) : (FIN(BICLOO)))" op=":">
+<Attr>
+<Pos l="28" s="1" c="15"/>
+</Attr>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:2:1" typref="403129221">
+<Attr>
+<Pos l="28" s="9" c="6"/>
+</Attr>
+</Id>
+<Unary_Exp typref="1238320532" op="FIN">
+<Attr>
+<Pos l="28" s="3" c="16"/>
+</Attr>
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:2:2:1" typref="403129221">
+<Attr>
+<Pos l="28" s="6" c="20"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="((libres) : (FIN(PLACES)))" op=":">
+<Attr>
+<Pos l="29" s="1" c="12"/>
+</Attr>
+<Id value="libres" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:3:1" typref="1935250049">
+<Attr>
+<Pos l="29" s="6" c="6"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3118279064" op="FIN">
+<Attr>
+<Pos l="29" s="3" c="13"/>
+</Attr>
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:3:2:1" typref="1935250049">
+<Attr>
+<Pos l="29" s="6" c="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="((place) : (((veloCircu) +-&gt; (PLACES))))" op=":">
+<Attr>
+<Pos l="32" s="1" c="12"/>
+</Attr>
+<Id value="place" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:4:1" typref="1811357324">
+<Attr>
+<Pos l="32" s="5" c="6"/>
+</Attr>
+</Id>
+<Binary_Exp typref="4059342327" op="+-&gt;">
+<Attr>
+<Pos l="32" s="3" c="24"/>
+</Attr>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:4:2:1" typref="403129221">
+<Attr>
+<Pos l="32" s="9" c="14"/>
+</Attr>
+</Id>
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:4:2:2" typref="1935250049">
+<Attr>
+<Pos l="32" s="6" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:5:1:1" typref="403129221">
+<Attr>
+<Pos l="35" s="4" c="11"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN">
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:5:1:1" typref="403129221">
+<Attr>
+<Pos l="35" s="4" c="11"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="(card(velo) &lt;= maxBicloo)" op="&lt;=">
+<Attr>
+<Pos l="35" s="2" c="17"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="35" s="4" c="6"/>
+</Attr>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:5:1:1" typref="403129221">
+<Attr>
+<Pos l="35" s="4" c="11"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="maxBicloo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:5:2" typref="2701647786">
+<Attr>
+<Pos l="35" s="9" c="20"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:6:1:1" typref="403129221">
+<Attr>
+<Pos l="36" s="9" c="11"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN">
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:6:1:1" typref="403129221">
+<Attr>
+<Pos l="36" s="9" c="11"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:6:2:1" typref="403129221">
+<Attr>
+<Pos l="36" s="4" c="30"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN">
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:5:1:6:2:1" typref="403129221">
+<Attr>
+<Pos l="36" s="4" c="30"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_rangerVelo</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="47" s="1" c="11"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:1:1" typref="683684820">
+<Attr>
+<Pos l="47" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:1:2" typref="403129221">
+<Attr>
+<Pos l="47" s="6" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="48" s="1" c="11"/>
+</Attr>
+<Id value="pl" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:2:1" typref="1012396504">
+<Attr>
+<Pos l="48" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:2:2" typref="1935250049">
+<Attr>
+<Pos l="48" s="6" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="49" s="1" c="11"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:3:1" typref="683684820">
+<Attr>
+<Pos l="49" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:3:2" typref="403129221">
+<Attr>
+<Pos l="49" s="9" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id value="libres" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:4:1:1:1" typref="1935250049">
+<Attr>
+<Pos l="50" s="6" c="14"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN">
+<Id value="libres" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:4:1:1:1" typref="1935250049">
+<Attr>
+<Pos l="50" s="6" c="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_rangerVelo</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="47" s="1" c="11"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:1:1" typref="683684820">
+<Attr>
+<Pos l="47" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:1:2" typref="403129221">
+<Attr>
+<Pos l="47" s="6" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="48" s="1" c="11"/>
+</Attr>
+<Id value="pl" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:2:1" typref="1012396504">
+<Attr>
+<Pos l="48" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:2:2" typref="1935250049">
+<Attr>
+<Pos l="48" s="6" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="49" s="1" c="11"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:3:1" typref="683684820">
+<Attr>
+<Pos l="49" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:3:2" typref="403129221">
+<Attr>
+<Pos l="49" s="9" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Attr>
+<Pos l="50" s="2" c="23"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="-">
+<Attr>
+<Pos l="50" s="1" c="21"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="50" s="4" c="9"/>
+</Attr>
+<Id value="libres" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:4:1:1:1" typref="1935250049">
+<Attr>
+<Pos l="50" s="6" c="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value="1" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:4:1:2" typref="2701647786">
+<Attr>
+<Pos l="50" s="1" c="22"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Integer_Literal value="0" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:1:2:1:4:2" typref="2701647786">
+<Attr>
+<Pos l="50" s="1" c="25"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_sortirVelo</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="61" s="1" c="11"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:1:1" typref="683684820">
+<Attr>
+<Pos l="61" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:1:2" typref="403129221">
+<Attr>
+<Pos l="61" s="6" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="62" s="1" c="11"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:2:1" typref="683684820">
+<Attr>
+<Pos l="62" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:2:2" typref="403129221">
+<Attr>
+<Pos l="62" s="4" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="/:">
+<Attr>
+<Pos l="63" s="2" c="11"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:3:1" typref="683684820">
+<Attr>
+<Pos l="63" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:3:2" typref="403129221">
+<Attr>
+<Pos l="63" s="9" c="13"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="64" s="1" c="11"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:4:1" typref="683684820">
+<Attr>
+<Pos l="64" s="2" c="9"/>
+</Attr>
+</Id>
+<Unary_Exp typref="403129221" op="dom">
+<Attr>
+<Pos l="64" s="3" c="12"/>
+</Attr>
+<Id value="place" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:4:2:1" typref="1811357324">
+<Attr>
+<Pos l="64" s="5" c="16"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:5:1:1:1" typref="403129221">
+<Attr>
+<Pos l="65" s="9" c="14"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN">
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:5:1:1:1" typref="403129221">
+<Attr>
+<Pos l="65" s="9" c="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:5:2:1" typref="403129221">
+<Attr>
+<Pos l="65" s="4" c="35"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN">
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:5:2:1" typref="403129221">
+<Attr>
+<Pos l="65" s="4" c="35"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos l="65" s="2" c="27"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="65" s="1" c="24"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="65" s="4" c="9"/>
+</Attr>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:5:1:1:1" typref="403129221">
+<Attr>
+<Pos l="65" s="9" c="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value="1" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:5:1:2" typref="2701647786">
+<Attr>
+<Pos l="65" s="1" c="25"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="65" s="4" c="30"/>
+</Attr>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:5:2:1" typref="403129221">
+<Attr>
+<Pos l="65" s="4" c="35"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id value="libres" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:6:1:1:1" typref="1935250049">
+<Attr>
+<Pos l="66" s="6" c="14"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN">
+<Id value="libres" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:6:1:1:1" typref="1935250049">
+<Attr>
+<Pos l="66" s="6" c="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_sortirVelo</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="61" s="1" c="11"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:1:1" typref="683684820">
+<Attr>
+<Pos l="61" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:1:2" typref="403129221">
+<Attr>
+<Pos l="61" s="6" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="62" s="1" c="11"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:2:1" typref="683684820">
+<Attr>
+<Pos l="62" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:2:2" typref="403129221">
+<Attr>
+<Pos l="62" s="4" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos l="63" s="2" c="11"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:3:1" typref="683684820">
+<Attr>
+<Pos l="63" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:3:2" typref="403129221">
+<Attr>
+<Pos l="63" s="9" c="13"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="64" s="1" c="11"/>
+</Attr>
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:4:1" typref="683684820">
+<Attr>
+<Pos l="64" s="2" c="9"/>
+</Attr>
+</Id>
+<Unary_Exp typref="403129221" op="dom">
+<Attr>
+<Pos l="64" s="3" c="12"/>
+</Attr>
+<Id value="place" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:4:2:1" typref="1811357324">
+<Attr>
+<Pos l="64" s="5" c="16"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos l="65" s="2" c="27"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="65" s="1" c="24"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="65" s="4" c="9"/>
+</Attr>
+<Id value="veloCircu" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:5:1:1:1" typref="403129221">
+<Attr>
+<Pos l="65" s="9" c="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value="1" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:5:1:2" typref="2701647786">
+<Attr>
+<Pos l="65" s="1" c="25"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="65" s="4" c="30"/>
+</Attr>
+<Id value="velo" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:5:2:1" typref="403129221">
+<Attr>
+<Pos l="65" s="4" c="35"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos l="66" s="2" c="24"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="66" s="1" c="21"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos l="66" s="4" c="9"/>
+</Attr>
+<Id value="libres" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:6:1:1:1" typref="1935250049">
+<Attr>
+<Pos l="66" s="6" c="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value="1" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:6:1:2" typref="2701647786">
+<Attr>
+<Pos l="66" s="1" c="22"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Id value="maxPlaces" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:2:1:6:2" typref="2701647786">
+<Attr>
+<Pos l="66" s="9" c="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id value="vv" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:3:1:1:2:1:2:1:2" typref="683684820">
+<Attr>
+<Pos l="68" s="2" c="34"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id value="place" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:3:1:1:2:1:2:1:1" typref="1811357324">
+<Attr>
+<Pos l="68" s="5" c="28"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id value="place" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:3:1:1:2:1:2:1:1" typref="1811357324">
+<Attr>
+<Pos l="68" s="5" c="28"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id value="place" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:3:1:1:2:1:2:1:1" typref="1811357324">
+<Attr>
+<Pos l="68" s="5" c="28"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id value="place" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:7:2:3:1:1:2:1:2:1:1" typref="1811357324">
+<Attr>
+<Pos l="68" s="5" c="28"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="1935250049">
+<Unary_Exp op="POW">
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:8:1:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="403129221">
+<Unary_Exp op="POW">
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:8:2:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="2701647786">
+<Id value="INTEGER" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:8:3:1"/>
+</Type>
+<Type id="1811357324">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:8:4:1:1:1"/>
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:8:4:1:1:2"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id value="INTEGER" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:8:5:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="1238320532">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:8:6:1:1:1"/>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3118279064">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:8:7:1:1:1"/>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="4059342327">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:8:8:1:1:1:1"/>
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:8:8:1:1:1:2"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:8:9:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="683684820">
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:8:10:1"/>
+</Type>
+<Type id="1012396504">
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:8:11:1"/>
+</Type>
+<Type id="1367082039">
+<Binary_Exp op="*">
+<Id value="BICLOO" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:8:12:1:1"/>
+<Id value="PLACES" tag="C:\Users\quest\Documents\AtelierB\Bicloo\bdp\Bicloo.bxml:1:8:12:1:2"/>
+</Binary_Exp>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

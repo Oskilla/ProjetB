@@ -1,0 +1,104 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(20) & WellDefinedness_Precondition_ajoutImage.1,(_f(61) & _f(60) & _f(67) & _f(66) & _f(53) => _f(54));
+_f(1) & _f(2) & _f(20) & _f(28) & WellDefinedness_typeImage.4,(_f(53) => _f(65));
+_f(1) & _f(2) & _f(20) & _f(28) & WellDefinedness_typeImage.3,(_f(53) => _f(64));
+_f(1) & _f(2) & _f(20) & _f(28) & WellDefinedness_typeImage.2,(_f(53) => _f(63));
+_f(1) & _f(2) & _f(20) & _f(28) & WellDefinedness_typeImage.1,(_f(53) => _f(62));
+_f(1) & _f(2) & _f(20) & WellDefinedness_Precondition_ajouterDrone.1,(_f(60) & _f(59) & _f(58) & _f(57) & _f(53) => _f(55));
+_f(1) & _f(2) & WellDefinednessInvariant.4,(_f(52) & _f(51) & _f(50) & _f(47) & _f(48) & _f(49) & _f(46) & _f(45) & _f(44) & _f(53) => _f(54));
+_f(1) & _f(2) & WellDefinednessInvariant.3,(_f(52) & _f(51) & _f(50) & _f(47) & _f(48) & _f(49) & _f(46) & _f(45) & _f(44) & _f(53) => _f(56));
+_f(1) & _f(2) & WellDefinednessInvariant.2,(_f(52) & _f(51) & _f(50) & _f(47) & _f(48) & _f(49) & _f(46) & _f(45) & _f(53) => _f(55));
+_f(1) & _f(2) & WellDefinednessInvariant.1,(_f(52) & _f(51) & _f(50) & _f(47) & _f(48) & _f(49) & _f(46) & _f(53) => _f(54));
+_f(1) & _f(2) & _f(20) & _f(29) & ajoutImage.5,(_f(22) & _f(4) => _f(34));
+_f(1) & _f(2) & _f(20) & _f(29) & ajoutImage.4,(_f(4) & _f(17) => _f(33));
+_f(1) & _f(2) & _f(20) & _f(29) & ajoutImage.3,(_f(4) & _f(13) => _f(32));
+_f(1) & _f(2) & _f(20) & _f(29) & ajoutImage.2,(_f(4) & _f(11) => _f(31));
+_f(1) & _f(2) & _f(20) & _f(29) & ajoutImage.1,(_f(4) & _f(5) => _f(30));
+_f(1) & _f(2) & _f(20) & _f(21) & ajouterDrone.5,(_f(22) & _f(4) => _f(27));
+_f(1) & _f(2) & _f(20) & _f(21) & ajouterDrone.4,(_f(4) & _f(15) => _f(26));
+_f(1) & _f(2) & _f(20) & _f(21) & ajouterDrone.3,(_f(4) & _f(11) => _f(25));
+_f(1) & _f(2) & _f(20) & _f(21) & ajouterDrone.2,(_f(4) & _f(9) => _f(24));
+_f(1) & _f(2) & _f(20) & _f(21) & ajouterDrone.1,(_f(4) & _f(7) => _f(23));
+_f(1) & _f(2) & Initialisation.8,(_f(3) & _f(4) => _f(19));
+_f(1) & _f(2) & Initialisation.7,(_f(4) & _f(17) => _f(18));
+_f(1) & _f(2) & Initialisation.6,(_f(4) & _f(15) => _f(16));
+_f(1) & _f(2) & Initialisation.5,(_f(4) & _f(13) => _f(14));
+_f(1) & _f(2) & Initialisation.4,(_f(4) & _f(11) => _f(12));
+_f(1) & _f(2) & Initialisation.3,(_f(4) & _f(9) => _f(10));
+_f(1) & _f(2) & Initialisation.2,(_f(4) & _f(7) => _f(8));
+_f(1) & _f(2) & Initialisation.1,(_f(4) & _f(5) => _f(6))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((1..2)*{TYPES}): FIN(NATURAL*{TYPES}) & not(((1..2)*{TYPES}) = {}) & IMAGES: FIN(INTEGER) & not(IMAGES = {}) & DRONES: FIN(INTEGER) & not(DRONES = {}) & ((maxDrones) : (NAT)) & (0 <= maxDrones) & (maxDrones +1 <= 2147483647) & ((maxImages) : (NAT)) & (0 <= maxImages) & (maxImages +1 <= 2147483647) & ((img) : (IMAGES));
+((img) : ({}));
+"Invariant is preserved";
+"Check invariant ((image) : (FIN(IMAGES)))";
+(({}) : (FIN(IMAGES)));
+"Check invariant ((drone) : (FIN(DRONES)))";
+(({}) : (FIN(DRONES)));
+"Check invariant ((typeDrone) : (((drone) --> (TYPES))))";
+(({}) : ((({}) --> (((1..2)*{TYPES})))));
+"Check invariant ((droneImage) : (((image) <-> (drone))))";
+(({}) : ((({}) <-> ({}))));
+"Check invariant (card(image) <= maxImages)";
+(card({}) <= maxImages);
+"Check invariant (card(drone) <= maxDrones)";
+(card({}) <= maxDrones);
+"Check invariant (card(diffuseImage) <= card(image))";
+(card({}) <= card({}));
+((({} )(({} )(img))) = ((2|->TYPES)));
+((image) : (FIN(IMAGES))) & ((drone) : (FIN(DRONES))) & ((diffuseImage) : (FIN(IMAGES))) & typeDrone : drone +-> ((1..2)*{TYPES}) & dom(typeDrone) = drone & ((typeDrone) : (((drone) --> (((1..2)*{TYPES}))))) & ((droneImage) : (((image) <-> (drone)))) & (card(image) <= maxImages) & (card(drone) <= maxDrones) & (card(diffuseImage) <= card(image)) & ((((img) : (diffuseImage))) => ((((typeDrone )((droneImage )(img))) = ((2|->TYPES)))));
+((dd) : (DRONES)) & ((tt) : (((1..2)*{TYPES}))) & not(dd : drone) & not(((dd) |-> (tt)) : typeDrone) & (card(drone) +1 <= maxDrones);
+((img) : (diffuseImage));
+((((drone) \/ (({dd})))) : (FIN(DRONES)));
+((((typeDrone) <+ (({((dd) |-> (tt))})))) : (((((drone) \/ (({dd})))) --> (((1..2)*{TYPES})))));
+((droneImage) : (((image) <-> (((drone) \/ (({dd})))))));
+(card(((drone) \/ (({dd})))) <= maxDrones);
+(((((typeDrone) <+ (({((dd) |-> (tt))}))) )((droneImage )(img))) = ((2|->TYPES)));
+((ii) : (IMAGES)) & ((ii) : (image));
+((ii) : (IMAGES)) & ((dd) : (DRONES)) & ((dd) : (drone)) & not(ii : image) & (card(image) +1 <= maxImages);
+((((image) \/ (({ii})))) : (FIN(IMAGES)));
+((((droneImage) <+ (({((ii) |-> (dd))})))) : (((((image) \/ (({ii})))) <-> (drone))));
+(card(((image) \/ (({ii})))) <= maxImages);
+(card(diffuseImage) <= card(((image) \/ (({ii})))));
+(((typeDrone )((((droneImage) <+ (({((ii) |-> (dd))}))) )(img))) = ((2|->TYPES)));
+((1..2)*{TYPES}): FIN(NATURAL*{TYPES}) & not(((1..2)*{TYPES}) = {});
+(maxImages +1 <= 2147483647);
+(0 <= maxImages);
+((maxImages) : (NAT));
+(maxDrones +1 <= 2147483647);
+(0 <= maxDrones);
+((maxDrones) : (NAT));
+((((img) : (diffuseImage))) => (((img) : (dom(droneImage))) & ((droneImage) : (((dom(droneImage)) +-> (ran(droneImage))))) & (((droneImage )(img)) : (dom(typeDrone))) & ((typeDrone) : (((dom(typeDrone)) +-> (ran(typeDrone)))))));
+(card(diffuseImage) <= card(image));
+(card(drone) <= maxDrones);
+(card(image) <= maxImages);
+((droneImage) : (((image) <-> (drone))));
+typeDrone : drone +-> ((1..2)*{TYPES});
+dom(typeDrone) = drone;
+((typeDrone) : (((drone) --> (((1..2)*{TYPES})))));
+((diffuseImage) : (FIN(IMAGES)));
+((drone) : (FIN(DRONES)));
+((image) : (FIN(IMAGES)));
+"Well definedness";
+((image) : (FIN(image)));
+((drone) : (FIN(drone)));
+((diffuseImage) : (FIN(diffuseImage)));
+not(((dd) |-> (tt)) : typeDrone);
+not(dd : drone);
+((tt) : (((1..2)*{TYPES})));
+((dd) : (DRONES));
+((ii) : (IMAGES));
+((ii) : (dom(droneImage)));
+((droneImage) : (((dom(droneImage)) +-> (ran(droneImage)))));
+(((droneImage )(ii)) : (dom(typeDrone)));
+((typeDrone) : (((dom(typeDrone)) +-> (ran(typeDrone)))));
+not(ii : image);
+((dd) : (drone))
+END
+&
+THEORY EnumerateX IS
+TYPES == {Militaire,Civil}
+END

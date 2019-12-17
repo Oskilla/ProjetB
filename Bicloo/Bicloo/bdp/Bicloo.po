@@ -1,0 +1,77 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(14) & _f(21) & WellDefinedness_sortirVelo.1,(_f(37) => _f(48));
+_f(1) & _f(2) & _f(14) & WellDefinedness_Precondition_sortirVelo.3,(_f(42) & _f(47) & _f(46) & _f(45) & _f(44) & _f(37) => _f(43));
+_f(1) & _f(2) & _f(14) & WellDefinedness_Precondition_sortirVelo.2,(_f(42) & _f(47) & _f(46) & _f(45) & _f(37) => _f(38));
+_f(1) & _f(2) & _f(14) & WellDefinedness_Precondition_sortirVelo.1,(_f(42) & _f(47) & _f(46) & _f(45) & _f(37) => _f(39));
+_f(1) & _f(2) & _f(14) & WellDefinedness_Precondition_rangerVelo.1,(_f(42) & _f(41) & _f(40) & _f(37) => _f(43));
+_f(1) & _f(2) & WellDefinednessInvariant.3,(_f(36) & _f(35) & _f(34) & _f(33) & _f(32) & _f(37) => _f(38));
+_f(1) & _f(2) & WellDefinednessInvariant.2,(_f(36) & _f(35) & _f(34) & _f(33) & _f(32) & _f(37) => _f(39));
+_f(1) & _f(2) & WellDefinednessInvariant.1,(_f(36) & _f(35) & _f(34) & _f(33) & _f(37) => _f(38));
+_f(1) & _f(2) & _f(14) & _f(21) & sortirVelo.4,(_f(3) & _f(12) => _f(25));
+_f(1) & _f(2) & _f(14) & _f(21) & sortirVelo.3,(_f(3) & _f(8) => _f(24));
+_f(1) & _f(2) & _f(14) & _f(21) & sortirVelo.2,(_f(3) & _f(6) => _f(23));
+_f(1) & _f(2) & _f(14) & _f(21) & sortirVelo.1,(_f(3) & _f(16) => _f(22));
+_f(1) & _f(2) & _f(14) & _f(15) & rangerVelo.4,(_f(3) & _f(12) => _f(20));
+_f(1) & _f(2) & _f(14) & _f(15) & rangerVelo.3,(_f(3) & _f(8) => _f(19));
+_f(1) & _f(2) & _f(14) & _f(15) & rangerVelo.2,(_f(3) & _f(6) => _f(18));
+_f(1) & _f(2) & _f(14) & _f(15) & rangerVelo.1,(_f(3) & _f(16) => _f(17));
+_f(1) & _f(2) & Initialisation.5,(_f(3) & _f(12) => _f(13));
+_f(1) & _f(2) & Initialisation.4,(_f(3) & _f(10) => _f(11));
+_f(1) & _f(2) & Initialisation.3,(_f(3) & _f(8) => _f(9));
+_f(1) & _f(2) & Initialisation.2,(_f(3) & _f(6) => _f(7));
+_f(1) & _f(2) & Initialisation.1,(_f(3) & _f(4) => _f(5))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+PLACES: FIN(INTEGER) & not(PLACES = {}) & BICLOO: FIN(INTEGER) & not(BICLOO = {}) & ((maxBicloo) : (NAT)) & (1 <= maxBicloo) & (maxBicloo +1 <= 2147483647) & ((maxPlaces) : (NAT)) & (1 <= maxPlaces) & (maxPlaces +1 <= 2147483647);
+"Invariant is preserved";
+"Check invariant ((velo) : (FIN(BICLOO)))";
+(({}) : (FIN(BICLOO)));
+"Check invariant ((libres) : (FIN(PLACES)))";
+(({}) : (FIN(PLACES)));
+"Check invariant ((place) : (((veloCircu) +-> (PLACES))))";
+(({}) : ((({}) +-> (PLACES))));
+"Check invariant (card(velo) <= maxBicloo)";
+(card({}) <= maxBicloo);
+"Check invariant (card(veloCircu) <= card(velo))";
+(card({}) <= card({}));
+((velo) : (FIN(BICLOO))) & ((veloCircu) : (FIN(BICLOO))) & ((libres) : (FIN(PLACES))) & ((place) : (((veloCircu) +-> (PLACES)))) & (card(velo) <= maxBicloo) & (card(veloCircu) <= card(velo));
+((vv) : (BICLOO)) & ((pl) : (PLACES)) & ((vv) : (veloCircu)) & (0 <= (card(libres) - 1));
+"Check invariant ((veloCircu) : (FIN(BICLOO)))";
+(((veloCircu - ({vv}))) : (FIN(BICLOO)));
+(((libres - ({pl}))) : (FIN(PLACES)));
+((((place) \/ (({((vv) |-> (pl))})))) : ((((veloCircu - ({vv}))) +-> (PLACES))));
+(card((veloCircu - ({vv}))) <= card(velo));
+((vv) : (BICLOO)) & ((vv) : (velo)) & not(vv : veloCircu) & ((vv) : (dom(place))) & ((card(veloCircu) + 1) <= card(velo)) & ((card(libres) + 1) <= maxPlaces);
+((((veloCircu) \/ (({vv})))) : (FIN(BICLOO)));
+((((libres) \/ (({(place )(vv)})))) : (FIN(PLACES)));
+((((({vv})) <<| (place))) : (((((veloCircu) \/ (({vv})))) +-> (PLACES))));
+(card(((veloCircu) \/ (({vv})))) <= card(velo));
+PLACES: FIN(INTEGER) & not(PLACES = {});
+(1 <= maxPlaces);
+((maxPlaces) : (NAT));
+(maxBicloo +1 <= 2147483647);
+(1 <= maxBicloo);
+((maxBicloo) : (NAT));
+(card(velo) <= maxBicloo);
+((place) : (((veloCircu) +-> (PLACES))));
+((libres) : (FIN(PLACES)));
+((veloCircu) : (FIN(BICLOO)));
+((velo) : (FIN(BICLOO)));
+"Well definedness";
+((velo) : (FIN(velo)));
+((veloCircu) : (FIN(veloCircu)));
+((vv) : (veloCircu));
+((pl) : (PLACES));
+((vv) : (BICLOO));
+((libres) : (FIN(libres)));
+((card(veloCircu) + 1) <= card(velo));
+((vv) : (dom(place)));
+not(vv : veloCircu);
+((vv) : (velo));
+((place) : (((dom(place)) +-> (ran(place)))))
+END
+&
+THEORY EnumerateX
+END
