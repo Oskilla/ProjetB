@@ -1,8 +1,15 @@
 ﻿
 THEORY ProofList IS
-_f(5) & _f(4) & _f(3) & _f(2) & _f(1) & _f(8) & _f(7) & _f(11) & _f(10) & _f(6) & _f(9) & ajouterVeloPrecondition.1,(_f(18) => _f(19));
-_f(5) & _f(4) & _f(3) & _f(2) & _f(1) & _f(8) & _f(7) & _f(11) & _f(10) & Invariants.1,(_f(14) => _f(15));
-_f(5) & _f(4) & Properties.1,(_f(12) => _f(13))
+_f(5) & _f(4) & _f(3) & _f(2) & _f(1) & _f(8) & _f(7) & _f(11) & _f(10) & _f(6) & _f(9) & sortirVeloPrecondition.4,(_f(34) => _f(35));
+_f(5) & _f(4) & _f(3) & _f(2) & _f(1) & _f(8) & _f(7) & _f(11) & _f(10) & _f(6) & _f(9) & sortirVeloPrecondition.3,(_f(32) => _f(33));
+_f(5) & _f(4) & _f(3) & _f(2) & _f(1) & _f(8) & _f(7) & _f(11) & _f(10) & _f(6) & _f(9) & sortirVeloPrecondition.2,(_f(30) => _f(31));
+_f(5) & _f(4) & _f(3) & _f(2) & _f(1) & _f(8) & _f(7) & _f(11) & _f(10) & _f(6) & _f(9) & sortirVeloPrecondition.1,(_f(28) => _f(29));
+_f(5) & _f(4) & _f(3) & _f(2) & _f(1) & _f(8) & _f(7) & _f(11) & _f(10) & _f(6) & _f(9) & rangerVeloPrecondition.1,(_f(24) => _f(25));
+_f(5) & _f(4) & _f(3) & _f(2) & _f(1) & _f(8) & _f(7) & _f(11) & _f(10) & Invariants.5,(_f(20) => _f(21));
+_f(5) & _f(4) & _f(3) & _f(2) & _f(1) & _f(8) & _f(7) & _f(11) & _f(10) & Invariants.4,(_f(18) => _f(19));
+_f(5) & _f(4) & _f(3) & _f(2) & _f(1) & _f(8) & _f(7) & _f(11) & _f(10) & Invariants.3,(_f(16) => _f(17));
+_f(5) & _f(4) & _f(3) & _f(2) & _f(1) & _f(8) & _f(7) & _f(11) & _f(10) & Invariants.2,(_f(14) => _f(15));
+_f(5) & _f(4) & _f(3) & _f(2) & _f(1) & _f(8) & _f(7) & _f(11) & _f(10) & Invariants.1,(_f(12) => _f(13))
 
 END
 &
@@ -10,29 +17,44 @@ END
 THEORY Formulas IS
 ("`Component constraints'" & btrue);
 ("`Used machines constraints'" & btrue);
-("`Component properties'" & BICLOO: FIN(INTEGER) & not(BICLOO = {}) & (1..5)*{PARCSS}: FIN(NATURAL*{PARCSS}) & not((1..5)*{PARCSS} = {}) & (1..10)*{PLACES}: FIN(NATURAL*{PLACES}) & not((1..10)*{PLACES} = {}) & maxBicloo: INTEGER & 0<=maxBicloo & maxBicloo<=2147483647 & 1<=maxBicloo & maxBicloo+1<=card((1..10)*{PLACES}));
+("`Component properties'" & BICLOO: FIN(INTEGER) & not(BICLOO = {}) & (1..10)*{PLACES}: FIN(NATURAL*{PLACES}) & not((1..10)*{PLACES} = {}) & maxBicloo: INTEGER & 0<=maxBicloo & maxBicloo<=2147483647 & 1<=maxBicloo & maxBicloo+1<=2147483647);
 ("`Seen and used machines properties'" & btrue);
 ("`Included,imported and extended machines properties'" & btrue);
-("`Component invariant'" & velo: FIN(BICLOO) & place: velo <-> (1..10)*{PLACES} & parcs: (1..10)*{PLACES} +-> (1..5)*{PARCSS} & dom(parcs) = (1..10)*{PLACES} & card(velo)<=maxBicloo & btrue & btrue);
+("`Component invariant'" & velo: FIN(BICLOO) & veloCircu: FIN(BICLOO) & libres: FIN((1..10)*{PLACES}) & place: BICLOO +-> (1..10)*{PLACES} & place~: (1..10)*{PLACES} +-> BICLOO & card(velo)<=maxBicloo & card(veloCircu)<=card(velo) & card(libres)<=card(velo) & btrue & btrue);
 ("`Seen and used machines invariants'" & btrue);
 ("`Included,imported and extended machines invariants'" & btrue);
 ("`Component assertions'" & btrue);
 ("`Seen and used machines assertions'" & btrue);
 ("`Included,imported and extended machines assertions'" & btrue);
-("`Local hypotheses'" & BICLOO: FIN(INTEGER) & not(BICLOO = {}) & (1..5)*{PARCSS}: FIN(NATURAL*{PARCSS}) & not((1..5)*{PARCSS} = {}) & (1..10)*{PLACES}: FIN(NATURAL*{PLACES}) & not((1..10)*{PLACES} = {}) & maxBicloo: INTEGER & 0<=maxBicloo & maxBicloo<=2147483647 & 1<=maxBicloo);
-((1..10)*{PLACES}: FIN((1..10)*{PLACES}));
-("`Local hypotheses'" & velo: FIN(BICLOO) & place: velo <-> (1..10)*{PLACES} & parcs: (1..10)*{PLACES} +-> (1..5)*{PARCSS} & dom(parcs) = (1..10)*{PLACES});
+("`Local hypotheses'" & velo: FIN(BICLOO) & veloCircu: FIN(BICLOO) & libres: FIN((1..10)*{PLACES}) & place: BICLOO +-> (1..10)*{PLACES} & place~: (1..10)*{PLACES} +-> BICLOO);
 (velo: FIN(velo));
-("`ajouterVelo preconditions in previous components'" & btrue);
-("`ajouterVelo preconditions in this component'" & vv: BICLOO & not(vv: velo) & card(velo)+1<=maxBicloo);
-("`Local hypotheses'" & vv: BICLOO & not(vv: velo));
+("`Local hypotheses'" & velo: FIN(BICLOO) & veloCircu: FIN(BICLOO) & libres: FIN((1..10)*{PLACES}) & place: BICLOO +-> (1..10)*{PLACES} & place~: (1..10)*{PLACES} +-> BICLOO & card(velo)<=maxBicloo);
+(veloCircu: FIN(veloCircu));
+("`Local hypotheses'" & velo: FIN(BICLOO) & veloCircu: FIN(BICLOO) & libres: FIN((1..10)*{PLACES}) & place: BICLOO +-> (1..10)*{PLACES} & place~: (1..10)*{PLACES} +-> BICLOO & card(velo)<=maxBicloo);
+(velo: FIN(velo));
+("`Local hypotheses'" & velo: FIN(BICLOO) & veloCircu: FIN(BICLOO) & libres: FIN((1..10)*{PLACES}) & place: BICLOO +-> (1..10)*{PLACES} & place~: (1..10)*{PLACES} +-> BICLOO & card(velo)<=maxBicloo & card(veloCircu)<=card(velo));
+(libres: FIN(libres));
+("`Local hypotheses'" & velo: FIN(BICLOO) & veloCircu: FIN(BICLOO) & libres: FIN((1..10)*{PLACES}) & place: BICLOO +-> (1..10)*{PLACES} & place~: (1..10)*{PLACES} +-> BICLOO & card(velo)<=maxBicloo & card(veloCircu)<=card(velo));
+(velo: FIN(velo));
+("`rangerVelo preconditions in previous components'" & btrue);
+("`rangerVelo preconditions in this component'" & vv: BICLOO & pl: (1..10)*{PLACES} & vv: veloCircu & not(vv: dom(place)) & 0<=card(libres)-1 & pl: libres & not(pl: ran(place)));
+("`Local hypotheses'" & vv: BICLOO & pl: (1..10)*{PLACES} & vv: veloCircu & not(vv: dom(place)));
+(libres: FIN(libres));
+("`sortirVelo preconditions in previous components'" & btrue);
+("`sortirVelo preconditions in this component'" & vv: BICLOO & vv: velo & not(vv: veloCircu) & vv: dom(place) & card(veloCircu)+1<=card(velo) & card(libres)+1<=card(velo));
+("`Local hypotheses'" & vv: BICLOO & vv: velo & not(vv: veloCircu) & vv: dom(place));
+(veloCircu: FIN(veloCircu));
+("`Local hypotheses'" & vv: BICLOO & vv: velo & not(vv: veloCircu) & vv: dom(place));
+(velo: FIN(velo));
+("`Local hypotheses'" & vv: BICLOO & vv: velo & not(vv: veloCircu) & vv: dom(place) & card(veloCircu)+1<=card(velo));
+(libres: FIN(libres));
+("`Local hypotheses'" & vv: BICLOO & vv: velo & not(vv: veloCircu) & vv: dom(place) & card(veloCircu)+1<=card(velo));
 (velo: FIN(velo))
 
 END
 &
 
 THEORY EnumerateX IS
-(PARCSS == {parc1,parc2,parc3,parc4,parc5});
-(PLACES == {palce1,place2,place3,place4,place5,place6,place7,place8,place9,place10})
+(PLACES == {pl1,pl2,pl3,pl4,pl5,pl6,pl7,pl8,pl9,pl10})
 
 END

@@ -1,0 +1,51 @@
+﻿/* Bicloo_i
+ * Author: Soline LECOMTE, Gaël LODE
+ * M1 Alma 2019
+ */
+
+IMPLEMENTATION Bicloo_i
+REFINES Bicloo
+SETS
+    OKKO = { OK , KO }
+DEFINITIONS
+    PLAGE_VELO == 1 .. 10
+VALUES
+    BICLOO = PLAGE_VELO ;
+    maxBicloo = 10
+
+CONCRETE_VARIABLES
+    c_velo , // ensemble des vélos
+    c_veloCircu , // ensemble des vélos en circulation
+    c_libres , // ensemble des places libres
+    c_place // relation entre un vélo et une place
+INVARIANT
+    c_velo : PLAGE_VELO --> OKKO
+    & velo = c_velo ~ [ { OK } ]
+    & c_veloCircu : PLAGE_VELO --> OKKO
+    & veloCircu = c_veloCircu ~ [ { KO } ]
+    & c_libres : FIN ( PLACES )
+    & c_place : PLAGE_VELO >+> PLACES
+    & place = ( veloCircu <| c_place )
+INITIALISATION
+    c_velo := ( PLAGE_VELO ) * { OK } ;
+    c_veloCircu := ( PLAGE_VELO ) * { OK } ;
+    c_libres := { pl1 , pl2 , pl3 , pl4 , pl5 , pl6 , pl7 , pl8 , pl9 , pl10 } ;
+    c_place := ( PLAGE_VELO ) * { pl1 }
+OPERATIONS
+    rangerVelo ( vv , pl ) =
+    BEGIN
+        c_place ( vv ) := pl ;
+        c_libres := c_libres - { pl } ;
+        c_veloCircu ( vv ) := OK
+    END
+    ;
+
+
+    //on sort un vélo
+    sortirVelo ( vv ) =
+    BEGIN
+        c_libres := c_libres \/ { c_place ( vv ) } ;
+        c_place := { vv } <<| c_place ;
+        c_veloCircu ( vv ) := KO
+    END
+ END

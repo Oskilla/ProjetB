@@ -1,0 +1,19 @@
+﻿THEORY BalanceX IS
+Bicloo_i,0,0,0,0,0,0,0;
+(sortirVeloSubstitution,0,0,0,0,0,0,0)
+
+END
+&
+
+THEORY ProofState 
+END
+&
+
+THEORY MethodList
+END
+&
+
+THEORY PassList 
+END
+&
+THEORY Manforms END

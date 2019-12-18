@@ -1,11 +1,19 @@
 ﻿THEORY BalanceX IS
-  Bicloo,3,0,0,3,0,0,0;
-  Properties,1,0,0,1,0,0,0;
-  Invariants,1,0,0,1,0,0,0;
-  ajouterVeloPrecondition,1,0,0,1,0,0,0
+  Bicloo,10,0,0,10,0,0,0;
+  Invariants,5,0,0,5,0,0,0;
+  rangerVeloPrecondition,1,0,0,1,0,0,0;
+  sortirVeloSubstitution,0,0,0,0,0,0,0;
+  sortirVeloPrecondition,4,0,0,4,0,0,0
 END
 &
 THEORY ProofState IS
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
   Proved(0);
   Proved(0);
   Proved(0)
@@ -14,10 +22,24 @@ END
 THEORY MethodList IS
   pr;
   pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
   pr
 END
 &
 THEORY PassList IS
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),?

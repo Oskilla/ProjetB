@@ -1,0 +1,34 @@
+﻿
+THEORY ProofList 
+
+END
+&
+
+THEORY Formulas IS
+("`Component constraints'" & btrue);
+("`Component properties'" & (1..2)*{OKKO}: FIN(NATURAL*{OKKO}) & not((1..2)*{OKKO} = {}));
+("`Seen and used machines properties'" & btrue);
+("`Included,imported and extended machines properties'" & btrue);
+("`Previous components properties'" & maxBicloo: INTEGER & 0<=maxBicloo & maxBicloo<=2147483647 & 1<=maxBicloo & maxBicloo+1<=2147483647 & BICLOO: FIN(INTEGER) & not(BICLOO = {}) & (1..10)*{PLACES}: FIN(NATURAL*{PLACES}) & not((1..10)*{PLACES} = {}));
+("`Valuations'" & BICLOO = 1..10 & maxBicloo = 10);
+("`Component invariant'" & c_velo: 1..10 +-> (1..2)*{OKKO} & dom(c_velo) = 1..10 & velo = c_velo~[{1|->OKKO}] & c_veloCircu: 1..10 +-> (1..2)*{OKKO} & dom(c_veloCircu) = 1..10 & veloCircu = c_veloCircu~[{2|->OKKO}] & c_libres: FIN((1..10)*{PLACES}) & c_place: 1..10 +-> (1..10)*{PLACES} & c_place~: (1..10)*{PLACES} +-> 1..10 & place = veloCircu<|c_place & btrue);
+("`Seen and used machines invariants'" & btrue);
+("`Included,imported and extended machines invariants'" & btrue);
+("`Previous components invariants'" & velo: FIN(BICLOO) & veloCircu: FIN(BICLOO) & libres: FIN((1..10)*{PLACES}) & place: BICLOO +-> (1..10)*{PLACES} & place~: (1..10)*{PLACES} +-> BICLOO & card(velo)<=maxBicloo & card(veloCircu)<=card(velo) & card(libres)<=card(velo));
+("`Component assertions'" & btrue);
+("`Seen and used machines assertions'" & btrue);
+("`Included,imported and extended machines assertions'" & btrue);
+("`Previous components assertions'" & btrue);
+("`rangerVelo preconditions in previous components'" & vv: BICLOO & pl: (1..10)*{PLACES} & vv: veloCircu & not(vv: dom(place)) & 0<=card(libres)-1 & pl: libres & not(pl: ran(place)));
+("`rangerVelo preconditions in this component'" & btrue);
+("`sortirVelo preconditions in previous components'" & vv: BICLOO & vv: velo & not(vv: veloCircu) & vv: dom(place) & card(veloCircu)+1<=card(velo) & card(libres)+1<=card(velo));
+("`sortirVelo preconditions in this component'" & btrue)
+
+END
+&
+
+THEORY EnumerateX IS
+(OKKO == {OK,KO});
+(PLACES == {pl1,pl2,pl3,pl4,pl5,pl6,pl7,pl8,pl9,pl10})
+
+END

@@ -1,15 +1,17 @@
 THEORY ProofList IS
-_f(1) & _f(2) & _f(14) & _f(23) & WellDefinedness_sortirVelo.1,(_f(40) => _f(54));
-_f(1) & _f(2) & _f(14) & WellDefinedness_Precondition_sortirVelo.4,(_f(49) & _f(53) & _f(52) & _f(51) & _f(50) & _f(40) => _f(41));
-_f(1) & _f(2) & _f(14) & WellDefinedness_Precondition_sortirVelo.3,(_f(49) & _f(53) & _f(52) & _f(51) & _f(50) & _f(40) => _f(43));
-_f(1) & _f(2) & _f(14) & WellDefinedness_Precondition_sortirVelo.2,(_f(49) & _f(53) & _f(52) & _f(51) & _f(40) => _f(41));
-_f(1) & _f(2) & _f(14) & WellDefinedness_Precondition_sortirVelo.1,(_f(49) & _f(53) & _f(52) & _f(51) & _f(40) => _f(42));
-_f(1) & _f(2) & _f(14) & WellDefinedness_Precondition_rangerVelo.1,(_f(49) & _f(48) & _f(47) & _f(46) & _f(40) => _f(43));
-_f(1) & _f(2) & WellDefinednessInvariant.5,(_f(39) & _f(38) & _f(37) & _f(34) & _f(35) & _f(36) & _f(33) & _f(32) & _f(40) => _f(41));
-_f(1) & _f(2) & WellDefinednessInvariant.4,(_f(39) & _f(38) & _f(37) & _f(34) & _f(35) & _f(36) & _f(33) & _f(32) & _f(40) => _f(43));
-_f(1) & _f(2) & WellDefinednessInvariant.3,(_f(39) & _f(38) & _f(37) & _f(34) & _f(35) & _f(36) & _f(33) & _f(40) => _f(41));
-_f(1) & _f(2) & WellDefinednessInvariant.2,(_f(39) & _f(38) & _f(37) & _f(34) & _f(35) & _f(36) & _f(33) & _f(40) => _f(42));
-_f(1) & _f(2) & WellDefinednessInvariant.1,(_f(39) & _f(38) & _f(37) & _f(34) & _f(35) & _f(36) & _f(40) => _f(41));
+_f(1) & _f(2) & _f(14) & _f(32) & WellDefinedness_veloPosition.1,(_f(44) => _f(57));
+_f(1) & _f(2) & _f(14) & _f(31) & WellDefinedness_confirmePositionVelo.1,(_f(44) => _f(57));
+_f(1) & _f(2) & _f(14) & _f(23) & WellDefinedness_sortirVelo.1,(_f(44) => _f(57));
+_f(1) & _f(2) & _f(14) & WellDefinedness_Precondition_sortirVelo.4,(_f(52) & _f(56) & _f(55) & _f(54) & _f(53) & _f(44) => _f(45));
+_f(1) & _f(2) & _f(14) & WellDefinedness_Precondition_sortirVelo.3,(_f(52) & _f(56) & _f(55) & _f(54) & _f(53) & _f(44) => _f(47));
+_f(1) & _f(2) & _f(14) & WellDefinedness_Precondition_sortirVelo.2,(_f(52) & _f(56) & _f(55) & _f(54) & _f(44) => _f(45));
+_f(1) & _f(2) & _f(14) & WellDefinedness_Precondition_sortirVelo.1,(_f(52) & _f(56) & _f(55) & _f(54) & _f(44) => _f(46));
+_f(1) & _f(2) & _f(14) & WellDefinedness_Precondition_rangerVelo.1,(_f(52) & _f(29) & _f(51) & _f(50) & _f(44) => _f(47));
+_f(1) & _f(2) & WellDefinednessInvariant.5,(_f(43) & _f(42) & _f(41) & _f(38) & _f(39) & _f(40) & _f(37) & _f(36) & _f(44) => _f(45));
+_f(1) & _f(2) & WellDefinednessInvariant.4,(_f(43) & _f(42) & _f(41) & _f(38) & _f(39) & _f(40) & _f(37) & _f(36) & _f(44) => _f(47));
+_f(1) & _f(2) & WellDefinednessInvariant.3,(_f(43) & _f(42) & _f(41) & _f(38) & _f(39) & _f(40) & _f(37) & _f(44) => _f(45));
+_f(1) & _f(2) & WellDefinednessInvariant.2,(_f(43) & _f(42) & _f(41) & _f(38) & _f(39) & _f(40) & _f(37) & _f(44) => _f(46));
+_f(1) & _f(2) & WellDefinednessInvariant.1,(_f(43) & _f(42) & _f(41) & _f(38) & _f(39) & _f(40) & _f(44) => _f(45));
 _f(1) & _f(2) & _f(14) & _f(23) & sortirVelo.5,(_f(3) & _f(21) => _f(28));
 _f(1) & _f(2) & _f(14) & _f(23) & sortirVelo.4,(_f(3) & _f(12) => _f(27));
 _f(1) & _f(2) & _f(14) & _f(23) & sortirVelo.3,(_f(3) & _f(8) => _f(26));
@@ -29,42 +31,46 @@ END
 &
 THEORY Formulas IS
 ((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
-PLACES: FIN(INTEGER) & not(PLACES = {}) & BICLOO: FIN(INTEGER) & not(BICLOO = {}) & ((maxBicloo) : (NAT)) & (1 <= maxBicloo) & (maxBicloo +1 <= 2147483647);
+((1..10)*{PLACES}): FIN(NATURAL*{PLACES}) & not(((1..10)*{PLACES}) = {}) & BICLOO: FIN(INTEGER) & not(BICLOO = {}) & ((maxBicloo) : (NAT)) & (1 <= maxBicloo) & (maxBicloo +1 <= 2147483647);
 "Invariant is preserved";
 "Check invariant ((velo) : (FIN(BICLOO)))";
 (({}) : (FIN(BICLOO)));
 "Check invariant ((libres) : (FIN(PLACES)))";
-(({}) : (FIN(PLACES)));
+(({}) : (FIN(((1..10)*{PLACES}))));
 "Check invariant ((place) : (((BICLOO) >+> (PLACES))))";
-(({}) : (((BICLOO) >+> (PLACES))));
+(({}) : (((BICLOO) >+> (((1..10)*{PLACES})))));
 "Check invariant (card(velo) <= maxBicloo)";
 (card({}) <= maxBicloo);
 "Check invariant (card(veloCircu) <= card(velo))";
 (card({}) <= card({}));
-((velo) : (FIN(BICLOO))) & ((veloCircu) : (FIN(BICLOO))) & ((libres) : (FIN(PLACES))) & place : BICLOO +-> PLACES & place~ : PLACES +-> BICLOO & ((place) : (((BICLOO) >+> (PLACES)))) & (card(velo) <= maxBicloo) & (card(veloCircu) <= card(velo)) & (card(libres) <= card(velo));
-((vv) : (BICLOO)) & ((pl) : (PLACES)) & ((vv) : (veloCircu)) & not(vv : dom(place)) & (0 <= (card(libres) - 1)) & ((pl) : (libres)) & not(pl : ran(place));
+((velo) : (FIN(BICLOO))) & ((veloCircu) : (FIN(BICLOO))) & ((libres) : (FIN(((1..10)*{PLACES})))) & place : BICLOO +-> ((1..10)*{PLACES}) & place~ : ((1..10)*{PLACES}) +-> BICLOO & ((place) : (((BICLOO) >+> (((1..10)*{PLACES}))))) & (card(velo) <= maxBicloo) & (card(veloCircu) <= card(velo)) & (card(libres) <= card(velo));
+((vv) : (BICLOO)) & ((pl) : (((1..10)*{PLACES}))) & ((vv) : (veloCircu)) & not(vv : dom(place)) & (0 <= (card(libres) - 1)) & ((pl) : (libres)) & not(pl : ran(place));
 "Check invariant ((veloCircu) : (FIN(BICLOO)))";
 (((veloCircu - ({vv}))) : (FIN(BICLOO)));
-(((libres - ({pl}))) : (FIN(PLACES)));
-((((place) <+ (({((vv) |-> (pl))})))) : (((BICLOO) >+> (PLACES))));
+(((libres - ({pl}))) : (FIN(((1..10)*{PLACES}))));
+((((place) <+ (({((vv) |-> (pl))})))) : (((BICLOO) >+> (((1..10)*{PLACES})))));
 (card((veloCircu - ({vv}))) <= card(velo));
 "Check invariant (card(libres) <= card(velo))";
 (card((libres - ({pl}))) <= card(velo));
 ((vv) : (BICLOO)) & ((vv) : (velo)) & not(vv : veloCircu) & ((vv) : (dom(place))) & ((card(veloCircu) + 1) <= card(velo)) & ((card(libres) + 1) <= card(velo));
 ((((veloCircu) \/ (({vv})))) : (FIN(BICLOO)));
-((((libres) \/ (({(place )(vv)})))) : (FIN(PLACES)));
-((((({vv})) <<| (place))) : (((BICLOO) >+> (PLACES))));
+((((libres) \/ (({(place )(vv)})))) : (FIN(((1..10)*{PLACES}))));
+((((({vv})) <<| (place))) : (((BICLOO) >+> (((1..10)*{PLACES})))));
 (card(((veloCircu) \/ (({vv})))) <= card(velo));
 (card(((libres) \/ (({(place )(vv)})))) <= card(velo));
-PLACES: FIN(INTEGER) & not(PLACES = {});
+((pl) : (((1..10)*{PLACES})));
+((vv) : (BICLOO)) & ((vv) : (velo));
+((vv) : (BICLOO)) & ((vv) : (velo)) & ((vv) : (dom(place))) & ((pl) : (((1..10)*{PLACES}))) & not(pl : libres) & ((pl) : (ran(place)));
+((vv) : (BICLOO)) & ((vv) : (velo)) & ((vv) : (dom(place)));
+((1..10)*{PLACES}): FIN(NATURAL*{PLACES}) & not(((1..10)*{PLACES}) = {});
 (1 <= maxBicloo);
 ((maxBicloo) : (NAT));
 (card(veloCircu) <= card(velo));
 (card(velo) <= maxBicloo);
-place : BICLOO +-> PLACES;
-place~ : PLACES +-> BICLOO;
-((place) : (((BICLOO) >+> (PLACES))));
-((libres) : (FIN(PLACES)));
+place : BICLOO +-> ((1..10)*{PLACES});
+place~ : ((1..10)*{PLACES}) +-> BICLOO;
+((place) : (((BICLOO) >+> (((1..10)*{PLACES})))));
+((libres) : (FIN(((1..10)*{PLACES}))));
 ((veloCircu) : (FIN(BICLOO)));
 ((velo) : (FIN(BICLOO)));
 "Well definedness";
@@ -75,14 +81,15 @@ place~ : PLACES +-> BICLOO;
 (0 <= (card(libres) - 1));
 not(vv : dom(place));
 ((vv) : (veloCircu));
-((pl) : (PLACES));
 ((vv) : (BICLOO));
 ((card(veloCircu) + 1) <= card(velo));
 ((vv) : (dom(place)));
 not(vv : veloCircu);
 ((vv) : (velo));
-((place) : (((dom(place)) +-> (ran(place)))))
+((place) : (((dom(place)) +-> (ran(place)))));
+not(pl : libres)
 END
 &
-THEORY EnumerateX
+THEORY EnumerateX IS
+PLACES == {pl1,pl2,pl3,pl4,pl5,pl6,pl7,pl8,pl9,pl10}
 END

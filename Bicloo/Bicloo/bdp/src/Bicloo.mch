@@ -5,7 +5,7 @@
 MACHINE
     Bicloo
 SETS
-    PLACES
+    PLACES = { pl1 , pl2 , pl3 , pl4 , pl5 , pl6 , pl7 , pl8 , pl9 , pl10 }
     ; BICLOO
 CONCRETE_CONSTANTS
     maxBicloo
@@ -72,6 +72,46 @@ OPERATIONS
         || place := { vv } <<| place
         || veloCircu := veloCircu \/ { vv }
     END
+    ;
 
+    //indique si une place pl est prise ou non
+    res <-- placePrise ( pl ) =
+    PRE
+        pl : PLACES
+    THEN
+        res := bool ( pl : ran ( place ) )
+    END
+    ;
+    //indique si un velo vv est en circulation ou non
+    res <-- veloEnCircu ( vv ) =
+    PRE
+        vv : BICLOO
+        & vv : velo
+    THEN
+        res := bool ( vv : veloCircu )
+    END
+    ;
+    //indique si un velo vv se trouve à la position pl
+    res <-- confirmePositionVelo ( vv , pl ) =
+    PRE
+        vv : BICLOO
+        & vv : velo
+        & vv : dom ( place )
+        & pl : PLACES
+        & pl /: libres
+        & pl : ran ( place )
+    THEN
+        res := bool ( place ( vv ) = pl )
+    END
+    ;
+    //indique la position du velo vv
+    res <-- veloPosition ( vv ) =
+    PRE
+        vv : BICLOO
+        & vv : velo
+        & vv : dom ( place )
+    THEN
+        res := place ( vv )
+    END
 
 END
