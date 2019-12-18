@@ -5,52 +5,45 @@
 
 IMPLEMENTATION Bicloo_i
 REFINES Bicloo
-SETS 
-    VELOS = {Circu, Placer};
-    ETATPL = {Libre, Occuper}
-DEFINITIONS
-    PLAGE_VELO == 0..20; 
-    PLAGE_PLACE == 0..20
-VALUES 
-    BICLOO = PLAGE_VELO;
-    maxBicloo = 20;
-    PLACES = PLAGE_PLACE;
-    maxPlaces = 20
+
 CONCRETE_VARIABLES
-    c_velo,
-    c_veloCircu,
-    c_libres,
-    c_place
-INVARIANT
-    c_velo = PLAGE_VELO --> VELOS
-    &velo = c_velo~[{Placer}]
-    &c_veloCircu = PLAGE_VELO --> VELOS
-    &veloCircu = c_veloCircu~[{Circu}]
-    &c_libres = PLAGE_PLACE --> ETATPL
-    &libres = c_libres~[{Libre}]
-    &c_place = PLAGE_VELO --> PLACES
-    &place = (veloCircu<|c_place)
-INITIALISATION
-    c_velo := (PLAGE_VELO)*{Circu};
-    c_veloCircu := (PLAGE_VELO)*{Circu};
-    c_libres := (PLAGE_PLACE)*{Libre};
-    c_place := (PLAGE_VELO)*{pl1}
+    c_velo, // ensemble des vélos
+    c_veloCircu, // ensemble des vélos en circulation
+    c_libres, // ensemble des places libres
+    c_place // relation entre un vélo et une place
+
+
 OPERATIONS
     rangerVelo(vv,pl) =
-    BEGIN
-        c_place:= c_place\/ {vv|->pl};
-        c_libres := c_libres-{pl};
-        c_veloCircu := c_veloCircu - {vv}
+    PRE
+        vv:BICLOO&
+        pl:PLACES & 
+        vv:veloCircu & 
+        vv/:dom(place)&
+        card(libres)-1>=0 &
+        pl:libres &
+        pl/:ran(place)
+    THEN
+        place(vv) := pl
+        ||libres := libres-{pl}
+        ||veloCircu := veloCircu - {vv}
     END
     ;
 
     
     //on sort un vélo
     sortirVelo(vv) = 
-    BEGIN
-        c_libres := c_libres\/{c_place(vv)};
-        c_place:={vv}<<|c_place;
-        c_veloCircu := c_veloCircu\/{vv}
+    PRE 
+        vv:BICLOO & 
+        vv:velo & 
+        vv/:veloCircu & 
+        vv:dom(place) & 
+        card(veloCircu)+1 <= card(velo) & 
+        card(libres)+1 <= card(velo)
+    THEN
+        libres := libres\/{place(vv)}
+        ||place:={vv}<<|place
+        ||veloCircu := veloCircu\/{vv}
     END
 
  END

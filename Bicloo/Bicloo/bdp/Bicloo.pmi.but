@@ -1,1 +1,1 @@
-﻿Flag(FileOn("Bicloo.pmi.res")) & Set(toto | maxBicloo: NAT & maxBicloo: INTEGER & place: velo +-> PLACES & vv: BICLOO & vv: veloCircu & velo: FIN(BICLOO) & place: velo +-> PLACES & card(velo)<=maxBicloo & card(veloCircu)<=card(velo) & vv: BICLOO & vv: veloCircu => vv: velo)
+﻿Flag(FileOn("Bicloo.pmi.res")) & Set(toto | bfalse)

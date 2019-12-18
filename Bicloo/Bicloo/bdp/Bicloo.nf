@@ -57,7 +57,7 @@ THEORY ListInvariantX IS
   Expanded_List_Invariant(Machine(Bicloo))==(btrue);
   Abstract_List_Invariant(Machine(Bicloo))==(btrue);
   Context_List_Invariant(Machine(Bicloo))==(btrue);
-  List_Invariant(Machine(Bicloo))==(velo: FIN(BICLOO) & veloCircu: FIN(BICLOO) & libres: FIN(PLACES) & place: veloCircu +-> PLACES & card(velo)<=maxBicloo & card(veloCircu)<=card(velo))
+  List_Invariant(Machine(Bicloo))==(velo: FIN(BICLOO) & veloCircu: FIN(BICLOO) & libres: FIN(PLACES) & place: BICLOO >+> PLACES & card(velo)<=maxBicloo & card(veloCircu)<=card(velo) & card(libres)<=card(velo))
 END
 &
 THEORY ListAssertionsX IS
@@ -115,21 +115,21 @@ END
 THEORY ListOperationGuardX END
 &
 THEORY ListPreconditionX IS
-  List_Precondition(Machine(Bicloo),rangerVelo)==(vv: BICLOO & pl: PLACES & vv: veloCircu & card(libres)-1>=0);
-  List_Precondition(Machine(Bicloo),sortirVelo)==(vv: BICLOO & vv: velo & vv/:veloCircu & vv: dom(place) & card(veloCircu)+1<=card(velo) & card(libres)+1<=maxPlaces)
+  List_Precondition(Machine(Bicloo),rangerVelo)==(vv: BICLOO & pl: PLACES & vv: veloCircu & vv/:dom(place) & card(libres)-1>=0 & pl: libres & pl/:ran(place));
+  List_Precondition(Machine(Bicloo),sortirVelo)==(vv: BICLOO & vv: velo & vv/:veloCircu & vv: dom(place) & card(veloCircu)+1<=card(velo) & card(libres)+1<=card(velo))
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Machine(Bicloo),sortirVelo)==(vv: BICLOO & vv: velo & vv/:veloCircu & vv: dom(place) & card(veloCircu)+1<=card(velo) & card(libres)+1<=maxPlaces | libres,place,veloCircu:=libres\/{place(vv)},{vv}<<|place,veloCircu\/{vv});
-  Expanded_List_Substitution(Machine(Bicloo),rangerVelo)==(vv: BICLOO & pl: PLACES & vv: veloCircu & card(libres)-1>=0 | place,libres,veloCircu:=place\/{vv|->pl},libres-{pl},veloCircu-{vv});
-  List_Substitution(Machine(Bicloo),rangerVelo)==(place:=place\/{vv|->pl} || libres:=libres-{pl} || veloCircu:=veloCircu-{vv});
+  Expanded_List_Substitution(Machine(Bicloo),sortirVelo)==(vv: BICLOO & vv: velo & vv/:veloCircu & vv: dom(place) & card(veloCircu)+1<=card(velo) & card(libres)+1<=card(velo) | libres,place,veloCircu:=libres\/{place(vv)},{vv}<<|place,veloCircu\/{vv});
+  Expanded_List_Substitution(Machine(Bicloo),rangerVelo)==(vv: BICLOO & pl: PLACES & vv: veloCircu & vv/:dom(place) & card(libres)-1>=0 & pl: libres & pl/:ran(place) | place,libres,veloCircu:=place<+{vv|->pl},libres-{pl},veloCircu-{vv});
+  List_Substitution(Machine(Bicloo),rangerVelo)==(place(vv):=pl || libres:=libres-{pl} || veloCircu:=veloCircu-{vv});
   List_Substitution(Machine(Bicloo),sortirVelo)==(libres:=libres\/{place(vv)} || place:={vv}<<|place || veloCircu:=veloCircu\/{vv})
 END
 &
 THEORY ListConstantsX IS
-  List_Valuable_Constants(Machine(Bicloo))==(maxBicloo,maxPlaces);
+  List_Valuable_Constants(Machine(Bicloo))==(maxBicloo);
   Inherited_List_Constants(Machine(Bicloo))==(?);
-  List_Constants(Machine(Bicloo))==(maxBicloo,maxPlaces)
+  List_Constants(Machine(Bicloo))==(maxBicloo)
 END
 &
 THEORY ListSetsX IS
@@ -158,7 +158,7 @@ THEORY ListPropertiesX IS
   Abstract_List_Properties(Machine(Bicloo))==(btrue);
   Context_List_Properties(Machine(Bicloo))==(btrue);
   Inherited_List_Properties(Machine(Bicloo))==(btrue);
-  List_Properties(Machine(Bicloo))==(maxBicloo: NAT & maxBicloo>=1 & maxBicloo<MAXINT & maxPlaces: NAT & maxPlaces>=1 & maxPlaces<MAXINT & PLACES: FIN(INTEGER) & not(PLACES = {}) & BICLOO: FIN(INTEGER) & not(BICLOO = {}))
+  List_Properties(Machine(Bicloo))==(maxBicloo: NAT & maxBicloo>=1 & maxBicloo<MAXINT & PLACES: FIN(INTEGER) & not(PLACES = {}) & BICLOO: FIN(INTEGER) & not(BICLOO = {}))
 END
 &
 THEORY ListSeenInfoX END
@@ -169,9 +169,9 @@ THEORY ListANYVarX IS
 END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Machine(Bicloo)) == (maxBicloo,maxPlaces,PLACES,BICLOO | ? | place,libres,veloCircu,velo | ? | rangerVelo,sortirVelo | ? | ? | ? | Bicloo);
+  List_Of_Ids(Machine(Bicloo)) == (maxBicloo,PLACES,BICLOO | ? | place,libres,veloCircu,velo | ? | rangerVelo,sortirVelo | ? | ? | ? | Bicloo);
   List_Of_HiddenCst_Ids(Machine(Bicloo)) == (? | ?);
-  List_Of_VisibleCst_Ids(Machine(Bicloo)) == (maxBicloo,maxPlaces);
+  List_Of_VisibleCst_Ids(Machine(Bicloo)) == (maxBicloo);
   List_Of_VisibleVar_Ids(Machine(Bicloo)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(Bicloo)) == (?: ?)
 END
@@ -181,7 +181,7 @@ THEORY SetsEnvX IS
 END
 &
 THEORY ConstantsEnvX IS
-  Constants(Machine(Bicloo)) == (Type(maxBicloo) == Cst(btype(INTEGER,?,?));Type(maxPlaces) == Cst(btype(INTEGER,?,?)))
+  Constants(Machine(Bicloo)) == (Type(maxBicloo) == Cst(btype(INTEGER,?,?)))
 END
 &
 THEORY VariablesEnvX IS

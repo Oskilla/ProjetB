@@ -8,32 +8,32 @@ SETS
     PLACES
     ; BICLOO
 CONCRETE_CONSTANTS
-    maxBicloo ,
-    maxPlaces
+    maxBicloo
 PROPERTIES
     // nombre max de vélo
     maxBicloo : NAT
     & maxBicloo >= 1
     & maxBicloo < MAXINT
-    & maxPlaces : NAT
-    & maxPlaces >= 1
-    & maxPlaces < MAXINT
 ABSTRACT_VARIABLES
     velo , // ensemble des vélos
     veloCircu , // ensemble des vélos en circulation
-    libres , // ensemble des places libres dans un parcs
+    libres , // ensemble des places libres
     place // relation entre un vélo et une place
+
 INVARIANT
-    velo : FIN ( BICLOO ) // les vélos sont un sous ensemble fini de BICLOO
+    velo : FIN ( BICLOO )
     & veloCircu : FIN ( BICLOO )
-    & libres : FIN ( PLACES ) // ensemble de place libres, nous permet également de vérifier la propriété 2
+    & libres : FIN ( PLACES )
 
     //cette ligne vérifie la propriété 3 : un vélo n'est pas nécessairement sur une place
-    & place : veloCircu +-> PLACES
+    & place : BICLOO >+> PLACES
 
     //c'est deux lignes nous assure la propriété 1, on n'a pas plus de vélo en circulation que de vélo au total
     & card ( velo ) <= maxBicloo
     & card ( veloCircu ) <= card ( velo )
+
+    // ensemble de place libres, nous permet également de vérifier la propriété 2
+    & card ( libres ) <= card ( velo )
 
 INITIALISATION
     velo := {} ||
@@ -41,15 +41,18 @@ INITIALISATION
     libres := {} ||
     veloCircu := {}
 OPERATIONS
-    //ranger un vélo a une place donnée 
+    //ranger un vélo vv issu d'une place pl 
     rangerVelo ( vv , pl ) =
     PRE
         vv : BICLOO &
         pl : PLACES &
         vv : veloCircu &
-        card ( libres ) - 1 >= 0
+        vv /: dom ( place ) &
+        card ( libres ) - 1 >= 0 &
+        pl : libres &
+        pl /: ran ( place )
     THEN
-        place := place \/ { vv |-> pl }
+        place ( vv ) := pl
         || libres := libres - { pl }
         || veloCircu := veloCircu - { vv }
     END
@@ -63,7 +66,7 @@ OPERATIONS
         vv /: veloCircu &
         vv : dom ( place ) &
         card ( veloCircu ) + 1 <= card ( velo ) &
-        card ( libres ) + 1 <= maxPlaces
+        card ( libres ) + 1 <= card ( velo )
     THEN
         libres := libres \/ { place ( vv ) }
         || place := { vv } <<| place
